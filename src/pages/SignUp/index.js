@@ -1,6 +1,9 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "../../services/base";
+import { Form } from "../Login/styles";
+import Container from "../../components/Container";
+import { Spacer } from "../../components/Spacer";
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
@@ -20,20 +23,26 @@ const SignUp = ({ history }) => {
   );
 
   return (
-    <div>
-      <h1>Sign up</h1>
-      <form onSubmit={handleSignUp}>
+    <Container>
+      <h1>Cadastre-se</h1>
+      <Form onSubmit={handleSignUp}>
         <label>
           Email
           <input name="email" type="email" placeholder="Email" />
         </label>
+
+        <Spacer />
+
         <label>
           Password
           <input name="password" type="password" placeholder="Password" />
         </label>
+
+        <Spacer />
+        
         <button type="submit">Sign Up</button>
-      </form>
-    </div>
+      </Form>
+    </Container>
   );
 };
 
