@@ -1,13 +1,14 @@
 import React from "react";
-import app from "../../services/base";
-// import { Container } from './styles';
+import DesktopLayout from "../../components/DesktopLayout";
+import Container from "../../components/Container";
 
 export const Home = () => {
   return (
-    <>
-      <h1>Home</h1>
-      <button onClick={() => app.auth().signOut()}>Sign out</button>
-    </>
+    <DesktopLayout>
+      <Container >
+        <h1>Home</h1>
+      </Container>
+    </DesktopLayout>
   );
 };
 
