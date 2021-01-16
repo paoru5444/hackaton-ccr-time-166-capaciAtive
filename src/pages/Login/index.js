@@ -1,46 +1,42 @@
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
-import app from "../../services/base.js";
-import { AuthContext } from "../../services/Auth";
+import React, { useState } from "react";
+import { withRouter } from "react-router";
+import { Investor, Entrepreneur } from "./styles";
+import Container from "../../components/Container";
+import LoginForm from "./LoginForm";
 
 const Login = ({ history }) => {
-  const handleLogin = useCallback(
-    async (event) => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await app
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
-      } catch (error) {
-        alert(error);
-      }
-    },
-    [history]
-  );
+  const [showForm, setShowForm] = useState(null);
 
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    return <Redirect to="/" />;
+  const handleLogin = (route) => {
+    history.push(route);
   }
-
   return (
-    <div>
-      <h1>Log in</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button type="submit">Log in</button>
-      </form>
-    </div>
+    <Container style={{ flexDirection: 'row' }}>
+      <Entrepreneur>
+        {showForm !== 0 && (
+          <button onClick={() => setShowForm(0)}>
+            Sou Empreendedor
+          </button>
+        )}
+
+        {showForm === 0 && (
+          <LoginForm onSubmit={() => handleLogin('/entrepreneur')} />
+        )}
+      </Entrepreneur>
+
+      <Investor>
+        {showForm !== 1 && (
+          <button onClick={() => setShowForm(1)}>
+            Sou Investidor
+          </button>
+        )}
+
+        {showForm === 1 && (
+          <LoginForm onSubmit={() => handleLogin('/investor')} />
+        )}
+      </Investor>
+      
+    </Container>
   );
 };
 
