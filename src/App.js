@@ -8,6 +8,9 @@ import Entrepreneur from "./pages/Entrepreneur";
 import Investor from "./pages/Investor";
 import ForgotPassword from "./pages/ForgotPassword";
 import RecoveryCode from "./pages/ForgotPassword/RecoveryCode";
+import Business from "./pages/Business";
+import School from "./pages/School";
+import Experts from "./pages/Experts";
 
 const App = () => {
   return (
@@ -20,6 +23,9 @@ const App = () => {
         <Route exact path="/investor" component={Investor} />
         <Route exact path="/forgot-password" component={ForgotPassword} />
         <Route exact path="/recovery" component={RecoveryCode} />
+        <Route exact path="/school" component={School} />
+        <Route exact path="/experts" component={Experts} />
+        <Route exact path="/business" component={Business} />
       </div>
     </Router>
   );
