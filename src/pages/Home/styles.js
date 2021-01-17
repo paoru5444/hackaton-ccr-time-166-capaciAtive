@@ -2,17 +2,49 @@ import styled from "styled-components";
 
 export const Header = styled.nav`
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 25%;
+  height: 100vh;
   align-items: center;
   padding-top: 32px;
-  padding-left: 140px;
-  background: rgb(9, 9, 121);
-  background: linear-gradient(
-    40deg,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-color: #fff;
+
+  .logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  ul {
+    width: 100%;
+
+    li {
+      list-style-type: none;
+      padding: 32px;
+    }
+
+    li:hover {
+      background-color: #eee;
+    }
+  }
+
+  button {
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    background: rgb(0,  198,  255);
+    background: linear-gradient(
+      
+      90deg,
+
+           rgba(0,  198,  255,  1) 0%,
+     
+      rgba(0,  114,  255,  1) 100%
+    
+    );
+  }
 `;
 
 export const HeaderItem = styled.div`
@@ -26,19 +58,18 @@ export const Avatar = styled.img`
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: -40px;
   border: solid 2.5px #f2f1f4;
 `;
 
 export const UserInfo = styled.section`
-  color: #f4f4f4;
-  padding-top: 24px;
+  color: #0078ff;
+  font-size: 28px;
+  font-weight: bold;
 `;
 
 export const Content = styled.section`
   width: 100%;
   display: flex;
-  padding-left: 140px;
 `;
 
 export const PageCard = styled.div`
@@ -60,4 +91,26 @@ export const PageCard = styled.div`
 
 export const IconsWrapper = styled.div`
   width: 20%;
+`;
+
+export const CardText = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  color: #fff;
+
+  h3 {
+    font-size: 23px;
+    letter-spacing: 0px;
+    font-weight: bolder;
+  }
+
+  span {
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    margin-bottom: 64px;
+    margin-top: 32px;
+  }
 `;
