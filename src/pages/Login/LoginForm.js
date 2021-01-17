@@ -22,9 +22,13 @@ function LoginForm({ history, ...props }) {
 
       <Spacer />
 
-      <label onClick={() => history.push('/forgot-password')}>Esqueci minha senha</label>
+      <label onClick={() => history.push("/forgot-password")}>
+        Esqueci minha senha
+      </label>
 
-      <button type="submit">Log in</button>
+      <Spacer />
+
+      <button type="submit">Entrar na Plataforma</button>
     </Form>
   );
 }

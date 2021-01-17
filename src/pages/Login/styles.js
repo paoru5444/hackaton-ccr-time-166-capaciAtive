@@ -41,19 +41,30 @@ export const Form = styled.form`
 
   input {
     width: 100%;
-    height: 40px;
+    height: 60px;
     margin-top: 5px;
     border-radius: 8px;
-    border: solid 1px #3c3c3c;
+    border: solid 0 #3c3c3c;
+    padding: 10px;
   }
 
   button {
-    height: 45px;
-    background-color: #2980b9;
+    height: 65px;
     border: none;
     border-radius: 8px;
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
+
+    background: rgb(9,  9,  121);
+        background: linear-gradient(
+      
+      40deg,
+    
+       rgba(9,  9,  121,  1) 0%,
+    
+       rgba(0,  212,  255,  1) 100%
+    
+    );
   }
 `;

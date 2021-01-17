@@ -11,31 +11,8 @@ const Login = ({ history }) => {
     history.push(route);
   }
   return (
-    <Container style={{ flexDirection: 'row' }}>
-      <Entrepreneur>
-        {showForm !== 0 && (
-          <button onClick={() => setShowForm(0)}>
-            Sou Empreendedor
-          </button>
-        )}
-
-        {showForm === 0 && (
-          <LoginForm onSubmit={() => handleLogin('/entrepreneur')} />
-        )}
-      </Entrepreneur>
-
-      <Investor>
-        {showForm !== 1 && (
-          <button onClick={() => setShowForm(1)}>
-            Sou Investidor
-          </button>
-        )}
-
-        {showForm === 1 && (
-          <LoginForm onSubmit={() => handleLogin('/investor')} />
-        )}
-      </Investor>
-      
+    <Container style={{ flexDirection: "row" }}>
+      <LoginForm onSubmit={() => handleLogin("/")} />
     </Container>
   );
 };
