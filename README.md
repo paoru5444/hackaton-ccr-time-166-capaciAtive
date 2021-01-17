@@ -36,3 +36,4 @@ Hajam vistas as dificuldades supracitadas em se inserir no mercado, muitos joven
   - React Root Navigation
   - Vector Icons
   - Firebase Realtime Database
+  - pure-react-carousel
