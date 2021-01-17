@@ -13,6 +13,7 @@ import Business from "./pages/Business";
 import School from "./pages/School";
 import Experts from "./pages/Experts";
 import ProgramRegister from "./pages/ProgramRegister";
+import WellcomePage from "./pages/WellcomePage";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route exact path="/experts" component={Experts} />
         <Route exact path="/business" component={Business} />
         <Route exact path="/program-register" component={ProgramRegister} />
+        <Route exact path="/wellcome" component={WellcomePage} />
       </div>
       <GlobalStyle />
     </Router>
