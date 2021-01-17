@@ -1,6 +1,5 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { withRouter } from "react-router";
-// import app from "../../services/base";
 import { Form } from "../Login/styles";
 import Container from "../../components/Container";
 import { Spacer } from "../../components/Spacer";
@@ -20,7 +19,7 @@ const SignUp = ({ history }) => {
       <h1>Cadastre-se</h1>
 
       <Spacer />
-      
+
       <Form onSubmit={sendSignUp}>
         <label>
           Email
@@ -31,13 +30,6 @@ const SignUp = ({ history }) => {
 
         <label>
           Senha
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-
-        <Spacer />
-
-        <label>
-          Password
           <input name="password" type="password" placeholder="Password" />
         </label>
 
