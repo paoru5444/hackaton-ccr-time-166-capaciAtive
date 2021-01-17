@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import GlobalStyle from "./styles/global";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -11,6 +12,7 @@ import RecoveryCode from "./pages/ForgotPassword/RecoveryCode";
 import Business from "./pages/Business";
 import School from "./pages/School";
 import Experts from "./pages/Experts";
+import ProgramRegister from "./pages/ProgramRegister";
 
 const App = () => {
   return (
@@ -26,7 +28,9 @@ const App = () => {
         <Route exact path="/school" component={School} />
         <Route exact path="/experts" component={Experts} />
         <Route exact path="/business" component={Business} />
+        <Route exact path="/program-register" component={ProgramRegister} />
       </div>
+      <GlobalStyle />
     </Router>
   );
 };
