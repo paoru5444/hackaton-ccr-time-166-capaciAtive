@@ -4,6 +4,7 @@ import { Form } from "../Login/styles";
 import Container from "../../components/Container";
 import { Spacer } from "../../components/Spacer";
 import { withRouter } from "react-router";
+import { Content, InfoArea } from "./styles";
 
 function ProgramRegister({ history }) {
   const [isAlowed, setIsAlowed] = useState(true);
@@ -23,12 +24,18 @@ function ProgramRegister({ history }) {
   return (
     <Container>
       {isAlowed ? (
-        <>
-          <h1>Formulário de inscrição</h1>
+        <Content>
+          <InfoArea>
+            <h1>
+              Agradecemos o interesse em querer fazer parte disso!
+            </h1>
+            <br />
+            <span>
+              São necessários alguns documentos e uma validação manual para podermos autorizar o ingresso e te adicionar no sistema de seleção. Garanta que você já têm em mãos os seguintes documentos: <br /><br /> 1. Certificado Internacional de Doenças (CID) em seu nome, assinado por um médico com CRM ativo.<br /><br /> 2. Comprovante de endereço atualizado em seu nome ou de parentes. <br /><br /> 3. Carteira de Identidade em formato PDF. É necessário ter um e-mail e/ou telefone ativos, pois entraremos em contato em breve.
+            </span>
+          </InfoArea>
 
-          <Spacer />
-
-          <Form onSubmit={registerInProgram}>
+          <Form style={{ width: '49%' }} onSubmit={registerInProgram}>
             <label>
               Nome Completo
               <input
@@ -85,7 +92,7 @@ function ProgramRegister({ history }) {
 
             <button type="submit">Cadastrar</button>
           </Form>
-        </>
+        </Content>
       ) : (
         <div>Parece que não pudemos selecionar você para o programa.</div>
       )}
