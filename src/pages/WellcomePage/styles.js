@@ -24,6 +24,7 @@ export const Header = styled.nav`
       border-radius: 12px;
       color: #0073ff;
       font-weight: bold;
+      cursor: pointer;
     }
 
     li:hover {

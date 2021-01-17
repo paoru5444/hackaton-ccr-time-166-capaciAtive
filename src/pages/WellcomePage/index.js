@@ -21,7 +21,7 @@ function WellcomePage({ history }) {
           <li>Sobre Nós</li>
           <li>Nossos Parceiros</li>
           <li>Nossos Cases</li>
-          <li>Ajuda</li>
+          <li>Ajude-nos</li>
         </ul>
       </Header>
 
