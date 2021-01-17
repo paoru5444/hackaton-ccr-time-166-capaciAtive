@@ -1,5 +1,7 @@
 # CapaciAtive
 
+<img src="../main/src/assets/wellcome.png" width="860" height="480" />
+
 ## Sumário
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Instalação](#instalação)
