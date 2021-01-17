@@ -56,15 +56,21 @@ export const Form = styled.form`
     font-size: 1rem;
     font-weight: bold;
 
-    background: rgb(9,  9,  121);
-        background: linear-gradient(
-      
-      40deg,
-    
-       rgba(9,  9,  121,  1) 0%,
-    
-       rgba(0,  212,  255,  1) 100%
-    
+    background: rgb(0, 198, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 198, 255, 1) 0%,
+      rgba(0, 114, 255, 1) 100%
     );
+  }
+
+  .outlined {
+    height: 65px;
+    border: solid 3px #0072ff;
+    border-radius: 8px;
+    color: #0072ff;
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent   !important;
   }
 `;
