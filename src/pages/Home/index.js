@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Container from "../../components/Container";
 import Card from "../../components/Card";
 import {Spacer} from "../../components/Spacer";
 import { database } from "../../services/base";
-import { Header, Avatar, UserInfo, Content, IconsWrapper, HeaderItem, CardText } from "./styles";
+import { Header, Avatar, UserInfo, Content, CardText } from "./styles";
 import { withRouter } from "react-router";
-import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
-
-const logo = require('../../assets/logo.png');
 
 export const Home = ({ history }) => {
   useEffect(() => {
@@ -53,32 +50,33 @@ export const Home = ({ history }) => {
   };
   
   return (
-    <Container style={{ justifyContent: "flex-start", flexDirection: 'row ' }}>
+    <Container style={{ justifyContent: "flex-start", flexDirection: "row " }}>
       <Header>
-          <img
-            className="logo"
-            src="https://firebasestorage.googleapis.com/v0/b/tcc-maps-241223.appspot.com/o/logo.png?alt=media&token=22c59740-91ea-4e52-b8a8-5c58b2f24dfe"
-          />
+        <img
+          className="logo"
+          src="https://firebasestorage.googleapis.com/v0/b/tcc-maps-241223.appspot.com/o/logo.png?alt=media&token=22c59740-91ea-4e52-b8a8-5c58b2f24dfe"
+        />
 
-          <Avatar src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" />
+        <Avatar src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" />
 
-          <Spacer />
+        <Spacer />
 
-          <UserInfo>
-            <h4>Matheus Pereira</h4>
-          </UserInfo>
+        <UserInfo>
+          <h4>Matheus Pereira</h4>
+        </UserInfo>
 
-          <Spacer size={64} />
-          <ul>
-            <li>Página Inicial</li>
-            <li>Configurações</li>
-            <li>Ajuda</li>
-          </ul>
-          
-          <Spacer size={64} />
-          <button>
-            Sugestão de acessibilidade
-          </button>
+        <Spacer size={64} />
+        <ul>
+          <li>Página Inicial</li>
+          <li>Configurações</li>
+          <li>Ajuda</li>
+          <a href="controle_financeiro.xlsx" download="Controle Financeiro">
+            <li>Planilha Organização Financeira</li>
+          </a>
+        </ul>
+
+        <Spacer size={64} />
+        <button>Sugestão de acessibilidade</button>
       </Header>
 
       <Spacer size={128} />
@@ -88,10 +86,10 @@ export const Home = ({ history }) => {
           <>
             <Card
               img={item.img}
-              style={{ justifyContent: 'flex-end'}}
+              style={{ justifyContent: "flex-end" }}
               onClick={() => history.push(item.link)}
             >
-              <img className="dashboard-img" src={item.img}/>
+              <img className="dashboard-img" src={item.img} />
               <CardText>
                 <h3>{item.title}</h3>
                 <span>{item.description}</span>
@@ -101,7 +99,7 @@ export const Home = ({ history }) => {
             <Spacer size={32} />
           </>
         ))}
-      </Content>  
+      </Content>
     </Container>
   );
 };

@@ -20,11 +20,16 @@ export const Header = styled.nav`
 
     li {
       list-style-type: none;
-      padding: 32px;
+      padding: 24px;
     }
 
     li:hover {
       background-color: #eee;
+    }
+
+    a {
+      text-decoration: none;
+      color: #3e3e3e;
     }
   }
 
@@ -34,15 +39,11 @@ export const Header = styled.nav`
     border: none;
     border-radius: 16px;
     padding: 16px;
-    background: rgb(0,  198,  255);
+    background: rgb(0, 198, 255);
     background: linear-gradient(
-      
       90deg,
-
-           rgba(0,  198,  255,  1) 0%,
-     
-      rgba(0,  114,  255,  1) 100%
-    
+      rgba(0, 198, 255, 1) 0%,
+      rgba(0, 114, 255, 1) 100%
     );
   }
 `;
